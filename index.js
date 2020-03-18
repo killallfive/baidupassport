@@ -13,6 +13,7 @@ $(function () {
     });
     $('#tel').focus(function (e) {
         $('#tel-validation-message').text('');
+        console.log(e.target.value == '');
     });
     $('#tel').blur(function (e) {
         var telreg = /^[1][3,4,5,7,8][0-9]{9}$/;
@@ -49,7 +50,5 @@ $(function () {
                 e.target.value = '获取验证码';
             }
         }, 1000);
-
-
     });
 })
